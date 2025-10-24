@@ -190,35 +190,36 @@ export default function Home() {
         </div>
       </motion.div>
       <Menu />
-      {/* Message d'arrière-plan : recherche d'alternance */}
-      <div
-        className="absolute inset-x-0 flex flex-col items-center text-center pointer-events-none select-none overflow-hidden
-                  w-full px-4
-                  top-8 sm:top-10 md:top-12
-                  [@media(orientation:portrait)]:bottom-10 [@media(orientation:portrait)]:top-auto"
-      >
-        <motion.div
-          className="relative font-mono uppercase tracking-[0.25em] leading-tight
-                    text-[5vw] sm:text-[3.5vw] md:text-[2.5vw] lg:text-[2vw]
-                    bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400
-                    bg-clip-text text-transparent animate-text-scan opacity-10"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 2 }}
-        >
-          RECHERCHE D&apos;ALTERNANCE
-          <br className="block" /> {/* saut de ligne forcé pour corriger l'espace */}
-          DÉVELOPPEMENT IA / DATA
+{/* Message d'arrière-plan : recherche d'alternance */}
+<div
+  className="absolute inset-x-0 flex flex-col items-center text-center pointer-events-none select-none overflow-hidden
+             w-full px-4
+             top-8 sm:top-10 md:top-12
+             [@media(orientation:portrait)]:bottom-30 [@media(orientation:portrait)]:top-auto"
+>
+  <motion.div
+    className="relative font-mono uppercase tracking-[0.25em] leading-tight
+               text-[5vw] sm:text-[3.5vw] md:text-[2.5vw] lg:text-[2vw]
+               bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400
+               bg-clip-text text-transparent animate-text-scan opacity-10"
+    initial={{ opacity: 0, y: -10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 2 }}
+  >
+    RECHERCHE D&apos;ALTERNANCE
+    <br className="block" />
+    DÉVELOPPEMENT IA / DATA
 
-          {/* Effet de scan vertical */}
-          <motion.div
-            className="absolute top-0 left-0 w-full h-full 
-                      bg-gradient-to-b from-transparent via-blue-400/20 to-transparent"
-            animate={{ y: ['-100%', '200%'] }}
-            transition={{ repeat: Infinity, duration: 3, ease: 'linear' }}
-          />
-        </motion.div>
-      </div>
+    {/* Effet de scan vertical */}
+    <motion.div
+      className="absolute top-0 left-0 w-full h-full 
+                 bg-gradient-to-b from-transparent via-blue-400/20 to-transparent"
+      animate={{ y: ['-100%', '200%'] }}
+      transition={{ repeat: Infinity, duration: 3, ease: 'linear' }}
+    />
+  </motion.div>
+</div>
+
     </main>
   )
 }

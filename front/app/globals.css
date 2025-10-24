@@ -145,17 +145,16 @@ body {
   }
 }
     /* Animation de scan horizontal du dégradé */
-    @keyframes text-scan {
-      0%   { background-position: 0% 50%; }
-      50%  { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+@keyframes text-scan {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
 
-    /* Utilitaire: ne met que l'animation + la taille du bg */
-    .animate-text-scan {
-      background-size: 200% auto;
-      animation: text-scan 6s linear infinite;
-    }
+.animate-text-scan {
+  background-size: 200% auto;
+  animation: text-scan 6s linear infinite alternate;
+}
+
 
 
 
