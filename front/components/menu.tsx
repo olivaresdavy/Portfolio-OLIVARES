@@ -113,10 +113,10 @@ export default function Menu() {
   };
 
   const sections = [
-    { label: "Who am I ?", path: "/about" },
-    { label: "My projects", path: "/projects" },
-    { label: "My experiences", path: "/experience" },
-    { label: "My educations", path: "/education" },
+    { label: "Qui suis-je ?", path: "/about" },
+    { label: "Mes projets", path: "/projects" },
+    { label: "Mes expériences", path: "/experience" },
+    { label: "Mes formations", path: "/education" },
     /*{ label: "Contact", path: "/contact" },*/
   ];
 

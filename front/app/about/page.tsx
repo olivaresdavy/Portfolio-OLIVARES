@@ -74,7 +74,7 @@ export default function About() {
                      after:w-3 after:h-3 after:bg-blue-400 after:rounded-tl-lg"
         >
           <h2 className="text-blue-400 text-lg sm:text-2xl font-semibold mb-3 tracking-wide flex items-center">
-            ABOUT ME
+            A PROPOS DE MOI
             <span className="ml-3 w-16 sm:w-24 h-[2px] bg-blue-400 animate-pulse"></span>
           </h2>
           <p className="text-slate-200 text-sm sm:text-base leading-relaxed">
