@@ -122,7 +122,7 @@ export default function Formation() {
             <ul className="list-disc list-inside text-sm text-slate-300 space-y-2">
               <li><strong className="text-blue-400">Esprit logique</strong> et structuration du raisonnement</li>
               <li><strong className="text-blue-400">Rigueur</strong> et persévérance dans la résolution de bugs</li>
-              <li><strong className="text-blue-400">Autonomie</strong> dans la recherche et l'apprentissage</li>
+              <li><strong className="text-blue-400">Autonomie</strong> dans la recherche et l&apos;apprentissage</li>
               <li><strong className="text-blue-400">Collaboration</strong> et partage de connaissances</li>
               <li><strong className="text-blue-400">Organisation</strong> et gestion du temps</li>
             </ul>

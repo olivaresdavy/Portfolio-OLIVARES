@@ -78,9 +78,11 @@ export default function About() {
             <span className="ml-3 w-16 sm:w-24 h-[2px] bg-blue-400 animate-pulse"></span>
           </h2>
           <p className="text-slate-200 text-sm sm:text-base leading-relaxed">
-                Bonjour, je m'appelle Davy OLIVARES.
-                Ancien technicien R&D issu du secteur pharmaceutique, j’ai décidé de me reconvertir dans le développement informatique, avec une spécialisation en <span className="text-blue-400">Data & Intelligence Artificielle</span>.
-                Je suis actuellement à la recherche d’une alternance à compter de <span className="text-blue-400">janvier 2026</span>, pour une durée de 33 mois (rythme : 2 semaines à Epitech / 6 semaines en entreprise).
+            Bonjour, je m&apos;appelle Davy OLIVARES.
+            Ancien technicien R&amp;D issu du secteur pharmaceutique, j&apos;ai décidé de me reconvertir dans le développement informatique,
+            avec une spécialisation en <span className="text-blue-400">Data &amp; Intelligence Artificielle</span>.
+            Je suis actuellement à la recherche d&apos;une alternance à compter de <span className="text-blue-400">janvier 2026</span>,
+            pour une durée de 33 mois (rythme&nbsp;: 2 semaines à Epitech / 6 semaines en entreprise).
           </p>
         </motion.div>
         {/* HOBBIES */}
