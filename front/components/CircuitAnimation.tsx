@@ -32,9 +32,9 @@ export default function CircuitAnimation() {
         {/* Halo lumineux (overlay) */}
         <motion.div
           className="absolute inset-0 pointer-events-none"
-          initial={{ scale: 0, opacity: 1 }}
-          animate={{ scale: [0, 2.5], opacity: [0.9, 0] }}
-          transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: [0, 1.5, 2.5], opacity: [0, 0.6, 0] }}
+          transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
           style={{
             background: 'radial-gradient(circle at center, #00AEEF 0%, transparent 70%)',
             filter: 'blur(80px)',
@@ -45,8 +45,8 @@ export default function CircuitAnimation() {
         {/* Masque pour révéler le circuit */}
         <motion.div
           className="absolute inset-0"
-          initial={{ scale: 0, opacity: 0.8 }}
-          animate={{ scale: [0, 2.5], opacity: [0.8, 0] }}
+          initial={{ scale: 0, opacity: 0.0 }}
+          animate={{ scale: [0, 1.5, 2.5], opacity: [0, 0.6, 0] }}
           transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
           style={{
             maskImage: 'radial-gradient(circle at center, white 0%, transparent 70%)',
@@ -74,13 +74,13 @@ export default function CircuitAnimation() {
           max-width: 100vw;
           max-height: 100vh;
           object-fit: contain;
-          transiition: transform 0.4s ease;
+          transition: transform 0.4s ease;
         }
 
         /* ✅ Portrait: on pivote tout le calque SVG+halo de 90° */
         @media (orientation: portrait) {
           .circuit-svg {
-            transform: rotate(90g);
+            transform: rotate(90deg);
             transform-origin: center center
           }
         }
