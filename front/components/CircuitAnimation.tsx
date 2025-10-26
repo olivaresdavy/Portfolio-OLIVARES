@@ -80,7 +80,7 @@ export default function CircuitAnimation() {
         /* ✅ Portrait: on pivote tout le calque SVG+halo de 90° */
         @media (orientation: portrait) {
           .circuit-svg {
-            transform: rotate(90deg);
+            transform: rotate(90g);
             transform-origin: center center
           }
         }
