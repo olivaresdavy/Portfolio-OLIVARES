@@ -57,114 +57,156 @@ export default function Projects() {
       </motion.div>
 
       {/* Contenu principal */}
-      <section className="relative z-30 mt-48 sm:mt-56 w-full max-w-5xl flex flex-col gap-10 pb-20">
+      <section className="relative z-30 mt-48 sm:mt-56 w-full max-w-6xl flex flex-col gap-12 pb-20">
 
-        {/* SECTION : PROJETS */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
+        {/* Titre global */}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5 }}
-          className="relative border border-blue-500/50 bg-blue-900/10 backdrop-blur-md 
-                     rounded-2xl px-5 py-6 sm:px-8 sm:py-8 
-                     shadow-[0_0_30px_#00aaff33] hover:shadow-[0_0_40px_#00aaff66]
-                     transition-all duration-500 before:content-[''] 
-                     before:absolute before:top-0 before:left-0 before:w-3 before:h-3 before:bg-blue-400 
-                     before:rounded-br-lg after:content-[''] after:absolute after:bottom-0 after:right-0 
-                     after:w-3 after:h-3 after:bg-blue-400 after:rounded-tl-lg"
+          viewport={{ once: true }}
+          className="text-blue-400 text-xl sm:text-3xl font-semibold tracking-wide text-center mb-8"
         >
-          <h2 className="text-blue-400 text-lg sm:text-2xl font-semibold mb-6 tracking-wide flex items-center">
-            MES PROJETS
-            <span className="ml-3 w-16 sm:w-24 h-[2px] bg-blue-400 animate-pulse"></span>
-          </h2>
+          MES PROJETS & COMPÉTENCES ASSOCIÉES
+        </motion.h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+        {/* === LISTE DES CARTES PROJET === */}
+        <div className="flex flex-col gap-10">
 
-            {/* JOB BOARD */}
+          {/* --- JOB BOARD --- */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-1 sm:grid-cols-2 items-center border border-blue-500/40 bg-blue-900/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 gap-6 shadow-[0_0_30px_#00aaff33] hover:shadow-[0_0_50px_#00aaff77] transition-all duration-500"
+          >
             <div className="flex flex-col items-center text-center gap-3">
-              <Image
-                src="/34932a3b-dbac-4a54-8429-a49d36d3552f.png"
-                alt="JobBoard Project"
-                width={300}
-                height={160}
-                className="rounded-lg shadow-[0_0_20px_#00aaff88]"
-              />
+              <Image src="/34932a3b-dbac-4a54-8429-a49d36d3552f.png" alt="JobBoard Project" width={300} height={160} className="rounded-lg shadow-[0_0_20px_#00aaff88]" />
               <h3 className="text-blue-400 font-semibold text-lg">Job Board</h3>
               <p className="text-sm text-slate-300">
-                Projet de 2 semaines visant à reproduire les fonctionnalités d’un site de recherche d’emploi.<br/>
-                <span className="text-blue-400">Techno :</span> React, Next.js (Front) · Node.js / Express (Back) · MySQL (BDD)
+                Reproduction d’un site de recherche d’emploi avec API et gestion MySQL.<br/>
+                <span className="text-blue-400">Durée :</span> 2 semaines
               </p>
             </div>
+            <ul className="list-disc list-inside space-y-2 text-sm text-slate-300">
+              <li><strong className="text-blue-400">Front-end :</strong> React, Next.js</li>
+              <li><strong className="text-blue-400">Back-end :</strong> Node.js, Express</li>
+              <li><strong className="text-blue-400">Base de données :</strong> MySQL</li>
+              <li><strong className="text-blue-400">Gestion :</strong> Git, GitHub, routes REST</li>
+              <li><strong className="text-blue-400">Compétences clés :</strong> structure full-stack, gestion d’API, CORS</li>
+            </ul>
+          </motion.div>
 
-            {/* PORTFOLIO IA */}
+          {/* --- PORTFOLIO IA --- */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-1 sm:grid-cols-2 items-center border border-blue-500/40 bg-blue-900/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 gap-6 shadow-[0_0_30px_#00aaff33] hover:shadow-[0_0_50px_#00aaff77] transition-all duration-500"
+          >
             <div className="flex flex-col items-center text-center gap-3">
-              <Image
-                src="/9266301e-8288-4d8c-9131-39fb594a16f6.png"
-                alt="Portfolio IA"
-                width={300}
-                height={160}
-                className="rounded-lg shadow-[0_0_20px_#00aaff88]"
-              />
+              <Image src="/9266301e-8288-4d8c-9131-39fb594a16f6.png" alt="Portfolio IA" width={300} height={160} className="rounded-lg shadow-[0_0_20px_#00aaff88]" />
               <h3 className="text-blue-400 font-semibold text-lg">Portfolio IA Interactif</h3>
               <p className="text-sm text-slate-300">
-                Création d’un portfolio en Next.js à univers cyber/IA. <br/>
-                <span className="text-blue-400">Techno :</span> Front Next.js · Back Express (prévu) · MySQL + IA (PyTorch / TensorFlow / Scikit-learn pour la V2/V3)
+                Portfolio personnel immersif en Next.js avec animations IA et halo lumineux.<br/>
+                <span className="text-blue-400">Durée :</span> projet continu
               </p>
             </div>
+            <ul className="list-disc list-inside space-y-2 text-sm text-slate-300">
+              <li><strong className="text-blue-400">Front-end :</strong> Next.js, Tailwind, Framer Motion</li>
+              <li><strong className="text-blue-400">Design :</strong> SVG, Inkscape, animations lumineuses</li>
+              <li><strong className="text-blue-400">IA (à venir) :</strong> PyTorch, Scikit-learn, TensorFlow</li>
+              <li><strong className="text-blue-400">Outils :</strong> Git, Vercel</li>
+              <li><strong className="text-blue-400">Compétences clés :</strong> UX futuriste, animation, responsive</li>
+            </ul>
+          </motion.div>
 
-            {/* CV INTERACTIF */}
+          {/* --- CV INTERACTIF --- */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-1 sm:grid-cols-2 items-center border border-blue-500/40 bg-blue-900/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 gap-6 shadow-[0_0_30px_#00aaff33] hover:shadow-[0_0_50px_#00aaff77] transition-all duration-500"
+          >
             <div className="flex flex-col items-center text-center gap-3">
-              <Image
-                src="/316b3059-5132-4219-8809-d4525ab12ddc.png"
-                alt="CV Interactif"
-                width={300}
-                height={160}
-                className="rounded-lg shadow-[0_0_20px_#00aaff88]"
-              />
+              {/* Image cliquable */}
+              <Link
+                href="https://olivaresdavy.github.io/Resume-online/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform hover:scale-[1.03] duration-300"
+              >
+                <Image
+                  src="/316b3059-5132-4219-8809-d4525ab12ddc.png"
+                  alt="CV Interactif"
+                  width={300}
+                  height={160}
+                  className="rounded-lg shadow-[0_0_25px_#00aaffaa]"
+                />
+              </Link>
+
               <h3 className="text-blue-400 font-semibold text-lg">CV Interactif</h3>
               <p className="text-sm text-slate-300">
-                <Link
-                  href = "https://olivaresdavy.github.io/Resume-online/">
-                  <span>CV immersif réalisé en 3 jours en HTML/CSS.</span><br/>
-                    <span className="text-blue-400">Framework :</span> Materialize
-                </Link>
+                CV immersif réalisé en HTML/CSS avec le framework Materialize.<br/>
+                <span className="text-blue-400">Durée :</span> 3 jours
               </p>
             </div>
+            <ul className="list-disc list-inside space-y-2 text-sm text-slate-300">
+              <li><strong className="text-blue-400">Langages :</strong> HTML5, CSS3</li>
+              <li><strong className="text-blue-400">Framework :</strong> Materialize</li>
+              <li><strong className="text-blue-400">Compétences clés :</strong> UI/UX design, animation CSS</li>
+            </ul>
+          </motion.div>
 
-            {/* HANGMAN */}
+          {/* --- HANGMAN --- */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-1 sm:grid-cols-2 items-center border border-blue-500/40 bg-blue-900/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 gap-6 shadow-[0_0_30px_#00aaff33] hover:shadow-[0_0_50px_#00aaff77] transition-all duration-500"
+          >
             <div className="flex flex-col items-center text-center gap-3">
-              <Image
-                src="/daa4027b-888e-41ff-8810-daab38bb2867.png"
-                alt="Hangman Python"
-                width={300}
-                height={160}
-                className="rounded-lg shadow-[0_0_20px_#00aaff88]"
-              />
-              <h3 className="text-blue-400 font-semibold text-lg">Hangman (Jeu du pendu)</h3>
+              <Image src="/daa4027b-888e-41ff-8810-daab38bb2867.png" alt="Hangman" width={300} height={160} className="rounded-lg shadow-[0_0_20px_#00aaff88]" />
+              <h3 className="text-blue-400 font-semibold text-lg">Hangman (Jeu du Pendu)</h3>
               <p className="text-sm text-slate-300">
-                Jeu Python sans interface graphique, avec sauvegarde des pseudos et scores.<br/>
-                <span className="text-blue-400">Techno :</span> Python + JSON
+                Jeu Python avec gestion des scores en JSON et logique d’erreur.<br/>
+                <span className="text-blue-400">Durée :</span> 2 jours
               </p>
             </div>
+            <ul className="list-disc list-inside space-y-2 text-sm text-slate-300">
+              <li><strong className="text-blue-400">Langage :</strong> Python</li>
+              <li><strong className="text-blue-400">Outils :</strong> JSON, Terminal</li>
+              <li><strong className="text-blue-400">Compétences clés :</strong> algorithmie, boucles, conditions, sauvegarde</li>
+            </ul>
+          </motion.div>
 
-            {/* CEASAR CIPHER */}
-            <div className="flex flex-col items-center text-center gap-3 sm:col-span-2">
-              <Image
-                src="/ca49d9d8-867e-412c-be98-87b2e7b701f3.png"
-                alt="Ceasar Cipher"
-                width={300}
-                height={160}
-                className="rounded-lg shadow-[0_0_20px_#00aaff88]"
-              />
+          {/* --- CEASAR CIPHER --- */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-1 sm:grid-cols-2 items-center border border-blue-500/40 bg-blue-900/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 gap-6 shadow-[0_0_30px_#00aaff33] hover:shadow-[0_0_50px_#00aaff77] transition-all duration-500"
+          >
+            <div className="flex flex-col items-center text-center gap-3">
+              <Image src="/ca49d9d8-867e-412c-be98-87b2e7b701f3.png" alt="Ceasar Cipher" width={300} height={160} className="rounded-lg shadow-[0_0_20px_#00aaff88]" />
               <h3 className="text-blue-400 font-semibold text-lg">Ceasar Cipher</h3>
               <p className="text-sm text-slate-300">
-                Petit code Python permettant d’encoder et décoder un message via chiffrement de César.<br/>
-                <span className="text-blue-400">Techno :</span> Python
+                Script Python permettant de chiffrer/déchiffrer un message par décalage de caractères.<br/>
+                <span className="text-blue-400">Durée :</span> 1 jour
               </p>
             </div>
-
-          </div>
-        </motion.div>
+            <ul className="list-disc list-inside space-y-2 text-sm text-slate-300">
+              <li><strong className="text-blue-400">Langage :</strong> Python</li>
+              <li><strong className="text-blue-400">Concepts :</strong> manipulation de chaînes, boucles, logique</li>
+              <li><strong className="text-blue-400">Compétences clés :</strong> chiffrement, algorithmie simple</li>
+            </ul>
+          </motion.div>
+        </div>
       </section>
 
       {/* Menu principal */}

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-export default function Education() {
+export default function Formation() {
   const [showAvatar, setShowAvatar] = useState(true)
 
   // ---- Gestion de la visibilité de l’avatar selon l’état du menu ----
@@ -57,60 +57,133 @@ export default function Education() {
       </motion.div>
 
       {/* Contenu principal */}
-      <section className="relative z-30 mt-48 sm:mt-56 w-full max-w-4xl flex flex-col gap-8 sm:gap-10 pb-20">
+      <section className="relative z-30 mt-48 sm:mt-56 w-full max-w-5xl flex flex-col gap-12 pb-20">
 
-        {/* FORMATIONS ACADÉMIQUES */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
+        {/* TITRE GLOBAL */}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5 }}
-          className="relative border border-blue-500/50 bg-blue-900/10 backdrop-blur-md 
-                     rounded-xl sm:rounded-2xl px-5 py-4 sm:px-8 sm:py-6 
-                     shadow-[0_0_30px_#00aaff33] hover:shadow-[0_0_40px_#00aaff66] 
-                     transition-all duration-500 before:content-[''] 
-                     before:absolute before:top-0 before:left-0 before:w-3 before:h-3 before:bg-blue-400 
-                     before:rounded-br-lg after:content-[''] after:absolute after:bottom-0 after:right-0 
-                     after:w-3 after:h-3 after:bg-blue-400 after:rounded-tl-lg"
+          viewport={{ once: true }}
+          className="text-blue-400 text-xl sm:text-3xl font-semibold tracking-wide text-center mb-8"
         >
-          <h2 className="text-blue-400 text-lg sm:text-2xl font-semibold mb-3 tracking-wide flex items-center">
-            FORMATIONS
-            <span className="ml-3 w-16 sm:w-24 h-[2px] bg-blue-400 animate-pulse"></span>
-          </h2>
+          FORMATIONS & COMPÉTENCES TRANSVERSES
+        </motion.h2>
 
-          <ul className="flex flex-col gap-6 text-slate-200 text-sm sm:text-base leading-relaxed">
-            <li>
-              <p className="font-semibold text-blue-400">MSc Pro Développement & Data/IA</p>
-              <p className="italic text-slate-400">Epitech Rennes – 2025 à 2028</p>
-              <ul className="list-disc list-inside mt-2 space-y-1">
-                <li>Master of Science Professionnel axé sur l’Intelligence Artificielle et la Data</li>
-                <li>Spécialisation en IA et Data </li>
-                <li>Rythme alterné : 2 semaines école / 6 semaines entreprise</li>
-              </ul>
-            </li>
+        {/* === LISTE DES CARTES FORMATION === */}
+        <div className="flex flex-col gap-10">
 
-            <li>
-              <p className="font-semibold text-blue-400">Technicien Supérieur en Pharmacie & Cosmétique Industrielle (TSPCI)</p>
-              <p className="italic text-slate-400">IMT Tours – 2015 à 2017</p>
-              <ul className="list-disc list-inside mt-2 space-y-1">
-                <li>Formation centrée sur la R&D et la qualité en industrie pharmaceutique</li>
-                <li>Apprentissage des méthodologies analytiques (HPLC, validation, etc.)</li>
-              </ul>
-            </li>
+          {/* --- MSc Pro IA – EPITECH --- */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-1 sm:grid-cols-2 items-center border border-blue-500/40 bg-blue-900/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 gap-6 
+                      shadow-[0_0_30px_#00aaff33] hover:shadow-[0_0_50px_#00aaff77] transition-all duration-500"
+          >
+            {/* Colonne gauche : formation */}
+            <div className="flex flex-col text-center sm:text-left gap-3">
+              <h3 className="text-blue-400 font-semibold text-lg">MSc Pro – Epitech Rennes</h3>
+              <p className="italic text-slate-400">2025 - 2028 | En cours</p>
+              <p className="text-sm text-slate-300">
+                Formation orientée développement logiciel, data et intelligence artificielle.  
+                Rythme alterné (2 semaines école / 6 semaines entreprise).
+              </p>
+            </div>
 
-            <li>
-              <p className="font-semibold text-blue-400">Cursus universitaire et apprentissage</p>
-              <p className="italic text-slate-400">Université Lille 2 / ULB Bruxelles / CFA Le Mans – 2009 à 2015</p>
-              <ul className="list-disc list-inside mt-2 space-y-1">
-                <li>Études en médecine, pharmacie et formation en apprentissage</li>
-                <li>Solide base scientifique, rigueur expérimentale et esprit analytique</li>
-              </ul>
-            </li>
-          </ul>
-        </motion.div>
+            {/* Colonne droite : compétences */}
+            <ul className="list-disc list-inside text-sm text-slate-300 space-y-2">
+              <li><strong className="text-blue-400">Résolution de problèmes</strong> complexes et autonomie technique</li>
+              <li><strong className="text-blue-400">Travail en équipe</strong> sur des projets collaboratifs</li>
+              <li><strong className="text-blue-400">Veille technologique</strong> et curiosité intellectuelle</li>
+              <li><strong className="text-blue-400">Apprentissage continu</strong> et montée en compétence rapide</li>
+              <li><strong className="text-blue-400">Adaptabilité</strong> aux environnements techniques</li>
+            </ul>
+          </motion.div>
+
+          {/* --- Pré-MSc – Epitech Rennes --- */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-1 sm:grid-cols-2 items-center border border-blue-500/40 bg-blue-900/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 gap-6 
+                      shadow-[0_0_30px_#00aaff33] hover:shadow-[0_0_50px_#00aaff77] transition-all duration-500"
+          >
+            <div className="flex flex-col text-center sm:text-left gap-3">
+              <h3 className="text-blue-400 font-semibold text-lg">Pré-MSc – Epitech Rennes</h3>
+              <p className="italic text-slate-400">2025 | Préparation intensive</p>
+              <p className="text-sm text-slate-300">
+                Formation de mise à niveau en algorithmie, POO, administration système et développement web.
+              </p>
+            </div>
+
+            <ul className="list-disc list-inside text-sm text-slate-300 space-y-2">
+              <li><strong className="text-blue-400">Esprit logique</strong> et structuration du raisonnement</li>
+              <li><strong className="text-blue-400">Rigueur</strong> et persévérance dans la résolution de bugs</li>
+              <li><strong className="text-blue-400">Autonomie</strong> dans la recherche et l'apprentissage</li>
+              <li><strong className="text-blue-400">Collaboration</strong> et partage de connaissances</li>
+              <li><strong className="text-blue-400">Organisation</strong> et gestion du temps</li>
+            </ul>
+          </motion.div>
+
+          {/* --- TSPCI – IMT TOURS --- */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-1 sm:grid-cols-2 items-center border border-blue-500/40 bg-blue-900/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 gap-6 
+                      shadow-[0_0_30px_#00aaff33] hover:shadow-[0_0_50px_#00aaff77] transition-all duration-500"
+          >
+            <div className="flex flex-col text-center sm:text-left gap-3">
+              <h3 className="text-blue-400 font-semibold text-lg">Technicien Supérieur en Pharmacie & Cosmétique Industrielle – IMT Tours</h3>
+              <p className="italic text-slate-400">2015 - 2017</p>
+              <p className="text-sm text-slate-300">
+                Formation technique axée sur la validation de procédés industriels.
+              </p>
+            </div>
+
+            <ul className="list-disc list-inside text-sm text-slate-300 space-y-2">
+              <li><strong className="text-blue-400">Rigueur expérimentale</strong> et précision des analyses</li>
+              <li><strong className="text-blue-400">Documentation</strong> et traçabilité des données</li>
+              <li><strong className="text-blue-400">Responsabilité</strong> en environnement industriel</li>
+              <li><strong className="text-blue-400">Respect</strong> des procédures et normes qualité</li>
+              <li><strong className="text-blue-400">Communication technique</strong> écrite et orale</li>
+            </ul>
+          </motion.div>
+
+          {/* --- UNIVERSITÉ / ERASMUS / PARCOURS SCIENTIFIQUE --- */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-1 sm:grid-cols-2 items-center border border-blue-500/40 bg-blue-900/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 gap-6 
+                      shadow-[0_0_30px_#00aaff33] hover:shadow-[0_0_50px_#00aaff77] transition-all duration-500"
+          >
+            <div className="flex flex-col text-center sm:text-left gap-3">
+              <h3 className="text-blue-400 font-semibold text-lg">Parcours scientifique et académique</h3>
+              <p className="italic text-slate-400">2009 - 2015 | Lille / Bruxelles / Le Mans</p>
+              <p className="text-sm text-slate-300">
+                Études en pharmacie, biologie et formation en apprentissage.  
+                Expériences académiques internationales et interdisciplinaires.
+              </p>
+            </div>
+
+            <ul className="list-disc list-inside text-sm text-slate-300 space-y-2">
+              <li><strong className="text-blue-400">Ouverture d’esprit</strong> et culture scientifique large</li>
+              <li><strong className="text-blue-400">Curiosité intellectuelle</strong> et adaptabilité</li>
+              <li><strong className="text-blue-400">Apprentissage interculturel</strong> (France / Belgique)</li>
+              <li><strong className="text-blue-400">Capacité d’analyse</strong> et esprit critique</li>
+              <li><strong className="text-blue-400">Persévérance</strong> dans les parcours longs</li>
+            </ul>
+          </motion.div>
+        </div>
       </section>
 
-      {/* Menu principal */}
+      {/* Menu principal (même placement que la page About Me) */}
       <Menu />
     </main>
   )

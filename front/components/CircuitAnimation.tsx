@@ -34,11 +34,11 @@ export default function CircuitAnimation() {
           className="absolute inset-0 pointer-events-none"
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: [0, 1.5, 2.5], opacity: [0, 0.6, 0] }}
-          transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
           style={{
-            background: 'radial-gradient(circle at center, #00AEEF 0%, transparent 70%)',
-            filter: 'blur(80px)',
-            mixBlendMode: 'lighten',
+            background: 'radial-gradient(circle at center, #0075A5 0%, transparent 70%)',
+            filter: 'blur(40px)',
+            mixBlendMode: 'soft-light',
           }}
         />
 
@@ -47,7 +47,7 @@ export default function CircuitAnimation() {
           className="absolute inset-0"
           initial={{ scale: 0, opacity: 0.0 }}
           animate={{ scale: [0, 1.5, 2.5], opacity: [0, 0.6, 0] }}
-          transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
           style={{
             maskImage: 'radial-gradient(circle at center, white 0%, transparent 70%)',
             WebkitMaskImage: 'radial-gradient(circle at center, white 0%, transparent 70%)',

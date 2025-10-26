@@ -57,58 +57,108 @@ export default function Experience() {
       </motion.div>
 
       {/* Contenu principal */}
-      <section className="relative z-30 mt-48 sm:mt-56 w-full max-w-4xl flex flex-col gap-8 sm:gap-10 pb-20">
-        {/* EXPÉRIENCES */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5 }}
-          className="relative border border-blue-500/50 bg-blue-900/10 backdrop-blur-md 
-                     rounded-xl sm:rounded-2xl px-5 py-4 sm:px-8 sm:py-6 
-                     shadow-[0_0_30px_#00aaff33] hover:shadow-[0_0_40px_#00aaff66] 
-                     transition-all duration-500 before:content-[''] 
-                     before:absolute before:top-0 before:left-0 before:w-3 before:h-3 before:bg-blue-400 
-                     before:rounded-br-lg after:content-[''] after:absolute after:bottom-0 after:right-0 
-                     after:w-3 after:h-3 after:bg-blue-400 after:rounded-tl-lg"
-        >
-          <h2 className="text-blue-400 text-lg sm:text-2xl font-semibold mb-3 tracking-wide flex items-center">
-            EXPÉRIENCES PROFESSIONNELLES
-            <span className="ml-3 w-16 sm:w-24 h-[2px] bg-blue-400 animate-pulse"></span>
-          </h2>
+      <section className="relative z-30 mt-48 sm:mt-56 w-full max-w-5xl flex flex-col gap-12 pb-20">
 
-          <ul className="flex flex-col gap-6 text-slate-200 text-sm sm:text-base leading-relaxed">
-            <li>
-              <p className="font-semibold text-blue-400">HTL Biotechnology - Technicien R&D Analytique</p>
+        {/* TITRE GLOBAL */}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-blue-400 text-xl sm:text-3xl font-semibold tracking-wide text-center mb-8"
+        >
+          EXPÉRIENCES PROFESSIONNELLES & SOFT SKILLS
+        </motion.h2>
+
+        {/* === LISTE DES CARTES EXPÉRIENCE === */}
+        <div className="flex flex-col gap-10">
+
+          {/* --- HTL R&D --- */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-1 sm:grid-cols-2 items-center border border-blue-500/40 bg-blue-900/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 gap-6 
+                      shadow-[0_0_30px_#00aaff33] hover:shadow-[0_0_50px_#00aaff77] transition-all duration-500"
+          >
+            {/* Colonne gauche : expérience */}
+            <div className="flex flex-col text-center sm:text-left gap-3">
+              <h3 className="text-blue-400 font-semibold text-lg">HTL Biotechnology – Technicien R&D Analytique</h3>
               <p className="italic text-slate-400">02/2023 - 08/2025 | Javené (35)</p>
-              <ul className="list-disc list-inside mt-2 space-y-1">
+              <ul className="list-disc list-inside text-sm text-slate-300 space-y-1">
                 <li>Conception et optimisation de méthodes analytiques (HPLC, SEC, GC)</li>
                 <li>Validation de méthodes d’analyse (VMA) et rédaction de rapports</li>
                 <li>Projets transverses R&D / CQ</li>
               </ul>
-            </li>
+            </div>
 
-            <li>
-              <p className="font-semibold text-blue-400">HTL Biotechnology - Technicien Contrôle Qualité</p>
+            {/* Colonne droite : soft skills */}
+            <ul className="list-disc list-inside text-sm text-slate-300 space-y-2">
+              <li><strong className="text-blue-400">Rigueur scientifique</strong> et respect des procédures</li>
+              <li><strong className="text-blue-400">Esprit d’analyse</strong> et validation expérimentale</li>
+              <li><strong className="text-blue-400">Autonomie</strong> et gestion de priorités</li>
+              <li><strong className="text-blue-400">Communication technique</strong> claire et structurée</li>
+              <li><strong className="text-blue-400">Collaboration</strong> inter-service R&D / CQ</li>
+            </ul>
+          </motion.div>
+
+          {/* --- HTL CQ --- */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-1 sm:grid-cols-2 items-center border border-blue-500/40 bg-blue-900/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 gap-6 
+                      shadow-[0_0_30px_#00aaff33] hover:shadow-[0_0_50px_#00aaff77] transition-all duration-500"
+          >
+            <div className="flex flex-col text-center sm:text-left gap-3">
+              <h3 className="text-blue-400 font-semibold text-lg">HTL Biotechnology – Technicien Contrôle Qualité</h3>
               <p className="italic text-slate-400">10/2018 - 02/2023 | Javené (35)</p>
-              <ul className="list-disc list-inside mt-2 space-y-1">
+              <ul className="list-disc list-inside text-sm text-slate-300 space-y-1">
                 <li>Analyses de routine en environnement BPF</li>
                 <li>Édition et revue des bulletins d’analyse (BA)</li>
                 <li>Key user ERP (Microsoft Dynamics)</li>
               </ul>
-            </li>
+            </div>
 
-            <li>
-              <p className="font-semibold text-blue-400">Stemcell Technologies - Projet international Erasmus+</p>
+            <ul className="list-disc list-inside text-sm text-slate-300 space-y-2">
+              <li><strong className="text-blue-400">Organisation</strong> et fiabilité dans l’exécution des tâches</li>
+              <li><strong className="text-blue-400">Gestion du temps</strong> et des priorités en environnement BPF</li>
+              <li><strong className="text-blue-400">Adaptabilité</strong> aux changements de procédés</li>
+              <li><strong className="text-blue-400">Esprit d’équipe</strong> et coordination interservices</li>
+              <li><strong className="text-blue-400">Documentation rigoureuse</strong> des résultats analytiques</li>
+            </ul>
+          </motion.div>
+
+          {/* --- STEMCELL TECHNOLOGIES --- */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-1 sm:grid-cols-2 items-center border border-blue-500/40 bg-blue-900/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 gap-6 
+                      shadow-[0_0_30px_#00aaff33] hover:shadow-[0_0_50px_#00aaff77] transition-all duration-500"
+          >
+            <div className="flex flex-col text-center sm:text-left gap-3">
+              <h3 className="text-blue-400 font-semibold text-lg">Stemcell Technologies – Projet Erasmus+</h3>
               <p className="italic text-slate-400">01/2018 - 07/2018 | Cambridge (Royaume-Uni)</p>
-              <ul className="list-disc list-inside mt-2 space-y-1">
-                <li>Travaux de recherche en culture de cellules souches (3D / organoïdes)</li>
+              <ul className="list-disc list-inside text-sm text-slate-300 space-y-1">
+                <li>Recherches sur cellules souches et organoïdes 3D</li>
                 <li>Conception expérimentale, formulation et restitution de résultats</li>
-                <li>Utilisation du FACS (Fluorescence Activated Cell Sorting)</li>
+                <li>Utilisation du FACS (tri cellulaire par fluorescence)</li>
               </ul>
-            </li>
-          </ul>
-        </motion.div>
+            </div>
+
+            <ul className="list-disc list-inside text-sm text-slate-300 space-y-2">
+              <li><strong className="text-blue-400">Curiosité scientifique</strong> et veille technologique</li>
+              <li><strong className="text-blue-400">Ouverture culturelle</strong> et communication interculturelle</li>
+              <li><strong className="text-blue-400">Adaptabilité</strong> à un environnement international</li>
+              <li><strong className="text-blue-400">Travail collaboratif</strong> et restitution orale en anglais</li>
+              <li><strong className="text-blue-400">Approche expérimentale</strong> et rigueur méthodologique</li>
+            </ul>
+          </motion.div>
+        </div>
       </section>
 
       {/* Menu principal (même placement que la page About Me) */}
