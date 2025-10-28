@@ -174,7 +174,7 @@ export default function Projects() {
               <h3 className="text-blue-400 font-semibold text-lg">Hangman (Jeu du Pendu)</h3>
               <p className="text-sm text-slate-300">
                 Jeu Python avec gestion des scores en JSON et logique d’erreur.<br/>
-                <span className="text-blue-400">Durée :</span> 2 jours
+                <span className="text-blue-400">Durée :</span> 1 jour
               </p>
             </div>
             <ul className="list-disc list-inside space-y-2 text-sm text-slate-300">
